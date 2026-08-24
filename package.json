@@ -1,24 +1,30 @@
 {
   "name": "decode-js",
+  "license": "GPL-3.0-or-later",
   "type": "module",
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
     "decode": "node src/main.js",
     "deob": "node src/main.js -t obfuscator",
+    "deobx": "node src/main.js -t obfuscatorx",
+    "dejsc": "node src/main.js -t jsconfuser",
     "deso": "node src/main.js -t sojson",
     "desov7": "node src/main.js -t sojsonv7",
     "test": "vitest --config vitest.config.js",
-    "lint": "eslint --ext .js --fix src"
+    "lint": "eslint --fix src"
   },
   "dependencies": {
-    "@babel/generator": "^7.25.0",
-    "@babel/parser": "^7.25.0",
-    "@babel/traverse": "^7.25.2",
-    "@babel/types": "^7.25.0",
-    "isolated-vm": "^6.0.2"
+    "@babel/generator": "^8.0.0",
+    "@babel/parser": "^8.0.0",
+    "@babel/traverse": "^8.0.0",
+    "@babel/types": "^8.0.0",
+    "isolated-vm": "^7.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@vitest/coverage-v8": "^4.0.14",
+    "@vitest/coverage-v8": "^4.1.9",
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
